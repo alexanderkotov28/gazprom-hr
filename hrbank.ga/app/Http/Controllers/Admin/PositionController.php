@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Requirement;
+use Illuminate\Http\Request;
 
 class PositionController extends Controller
 {
@@ -23,9 +24,9 @@ class PositionController extends Controller
         
     }
 
-    public function create()
+    public function create(Request $request)
     {
-        
+        dd($request->all());
     }
 
     public function update()

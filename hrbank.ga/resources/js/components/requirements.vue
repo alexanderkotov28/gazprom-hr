@@ -6,14 +6,14 @@
           <field-select v-model="lines[i].selected_requirement" title="Характеристика" :options="req"></field-select>
         </div>
         <div class="col-6" v-if="line.selected_requirement">
-          <field-select v-if="checkSelectYear(line)" title="Опыт работы" :options="years"></field-select>
+          <field-select name="requirements[]" v-if="checkSelectYear(line)" title="Опыт работы" :options="years"></field-select>
           <!--          <field-select v-if="checkSelectOptions(line)" multiple="true" title="asdasd" :options="line.selected_requirement.options"></field-select>-->
           <multiselect v-if="checkSelectOptions(line)" v-model="line.options" :multiple="true" placeholder="Дополнительно"
                        label="title" :options="getSelectedOptions(line.selected_requirement.options)"></multiselect>
         </div>
       </div>
     </div>
-    <button @click="addLine" class="btn btn_sm btn_blue">Добавить</button>
+    <button @click="addLine" type="button" class="btn btn_sm btn_blue">Добавить</button>
   </div>
 </template>
 
