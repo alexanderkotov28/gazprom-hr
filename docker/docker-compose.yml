@@ -29,7 +29,7 @@ services:
   python:
     build: ./images/python
     volumes:
-    - ../py-test:/code
+    - ../bot:/code
     tty: true
   node:
     image: library/node:10-alpine

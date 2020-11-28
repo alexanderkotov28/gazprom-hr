@@ -23,17 +23,22 @@
                         <div class="h2">Требования</div>
                         <div class="subtitle">Составьте список требований для данной должности. В зависимости от выбранного требования, Вы можете дополнить его описанием или смежными с ним компетенциями</div>
                         <div class="row">
-
-{{--                                <field-select options='{{ $requirements }}' title="Требование"></field-select>--}}
-                                <requirements req='{{ $requirements }}'></requirements>
-
-{{--                            <div class="col-6">--}}
-{{--                                <field-select title="Требование"></field-select>--}}
-{{--                            </div>--}}
+                            <requirements req='{{ $requirements }}'></requirements>
                         </div>
-{{--                        <div class="card">--}}
-{{--                            --}}
-{{--                        </div>--}}
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <div class="h2">Условия</div>
+                        <div class="row">
+                            <div class="col-6">
+                                <input id="check-sheduale_5/2" name="position[sheduale]" class="input" type="radio">
+                                <label for="check-sheduale_5/2">5/2</label>
+                            </div>
+{{--                            <datepicker></datepicker>--}}
+{{--                            <vue-timepicker></vue-timepicker>--}}
+                        </div>
                     </div>
                 </div>
             </div>
