@@ -8,15 +8,14 @@
                 <div>
                     <div style="font-size: 18px;">Данные для входа:</div>
                     <div class="mt-1">
-                        <div>Заказчик:</div>
                         <div>employer@hrbank.ga</div>
                         <div>test</div>
                     </div>
-                    <div class="mt-2 mb-4">
-                        <div>HR:</div>
-                        <div>hr@hrbank.ga</div>
-                        <div>test</div>
-                    </div>
+{{--                    <div class="mt-2 mb-4">--}}
+{{--                        <div>HR:</div>--}}
+{{--                        <div>hr@hrbank.ga</div>--}}
+{{--                        <div>test</div>--}}
+{{--                    </div>--}}
                 </div>
                 <field-input title="E-mail" type="email" name="email" @error('email') error="{{ $message }}" @enderror></field-input>
                 <field-input title="Пароль" type="password" name="password" @error('password') error="{{ $message }}" @enderror></field-input>
