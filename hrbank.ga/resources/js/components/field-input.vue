@@ -10,13 +10,13 @@
 
 <script>
 export default {
-  props: ['title', 'error', 'type', 'name'],
+  props: ['title', 'error', 'type', 'name', 'default'],
 
   data(){
     return {
       hover: false,
       focus: false,
-      value: ''
+      value: this.default?this.default:''
     };
   },
   methods: {

@@ -1,11 +1,7 @@
 <template>
   <div class="input-field" :class="fieldClass" @mouseenter="mouseenter" @mouseleave="mouseleave">
-    <div class="input-field__placeholder" :class="placeholderClass">{{ title }}</div>
-    <input type="hidden" :name="name" v-model="selected_id">
-    <input v-model="value" type="text" class="input-field__input" @focusin="focusin" @focusout="focusout">
-    <div class="input-field__select" :class="selectClass">
-      <div @click="select(item.id, i)" v-for="(item, i) in items" class="input-field__option">{{ item.title }}</div>
-    </div>
+    <div class="input-field__placeholder input-field__placeholder_textarea" :class="placeholderClass">{{ title }}</div>
+    <textarea v-model="value" :name="name" cols="30" rows="3" class="input-field__input" @focusin="focusin" @focusout="focusout"></textarea>
   </div>
 </template>
 
@@ -20,7 +16,6 @@ export default {
       items: typeof this.options === "string" ? JSON.parse(this.options) : this.options,
       selected: false,
       selected_index: false,
-      selected_id: null,
       multiple_selected: []
     };
   },

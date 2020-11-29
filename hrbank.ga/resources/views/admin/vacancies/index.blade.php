@@ -23,7 +23,7 @@
 
         <div class="row">
             <div class="col-12">
-                <list></list>
+                <list items='{{ $vacancies }}'></list>
             </div>
         </div>
     </div>

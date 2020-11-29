@@ -39,11 +39,15 @@
   }
 
   &__item-footer{
+    margin-top: 8px;
     display: flex;
     justify-content: space-between;
   }
 
-  &__item-footer-left{}
+  &__item-footer-left{
+    color: $asphalt;
+    font-size: 14px;
+  }
 
   &__item-footer-right{
     color: $asphalt;

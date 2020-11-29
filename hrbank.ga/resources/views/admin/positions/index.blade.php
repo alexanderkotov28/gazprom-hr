@@ -6,7 +6,7 @@
     <div class="container section">
         <div class="row">
             <div class="col-6">
-                <div class="section__subtitle">Вакансии</div>
+                <div class="section__subtitle">Должности</div>
                 <div class="section__title">Список должностей</div>
             </div>
 
@@ -23,7 +23,7 @@
 
         <div class="row">
             <div class="col-12">
-                <list></list>
+                <list items='{{ $positions }}'></list>
             </div>
         </div>
     </div>

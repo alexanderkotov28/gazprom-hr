@@ -6,9 +6,9 @@
           <field-select v-model="lines[i].selected_requirement" title="Характеристика" :options="req"></field-select>
         </div>
         <div class="col-6" v-if="line.selected_requirement">
-          <field-select name="requirements[]" v-if="checkSelectYear(line)" title="Опыт работы" :options="years"></field-select>
+          <field-select name="requirements[]" v-model="line.exp" v-if="checkSelectYear(line)" title="Опыт работы" :options="years"></field-select>
           <!--          <field-select v-if="checkSelectOptions(line)" multiple="true" title="asdasd" :options="line.selected_requirement.options"></field-select>-->
-          <multiselect v-if="checkSelectOptions(line)" v-model="line.options" :multiple="true" placeholder="Дополнительно"
+          <multiselect v-if="checkSelectOptions(line)" v-model="line.options_multiple" :multiple="true" placeholder="Дополнительно"
                        label="title" :options="getSelectedOptions(line.selected_requirement.options)"></multiselect>
         </div>
       </div>
@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "requirements",
-  props: ['req'],
+  props: ['req', 'default'],
   data: function () {
     return {
       requirements: JSON.parse(this.req),
@@ -53,6 +53,19 @@ export default {
         }
         return option;
       })
+    },
+    getLines(){
+      return this.lines;
+    }
+  },
+  mounted(){
+    if (this.default){
+      var defaults = JSON.parse(this.default);
+      defaults.forEach(def=>{
+        console.log(def)
+      });
+
+      this.lines = defaults;
     }
   }
 }
